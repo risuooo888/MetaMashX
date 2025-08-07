@@ -1,0 +1,119 @@
+<body>
+  <h1>Welcome to MetaMashX Video Chat</h1>
+
+  <p id="userInfo"></p>
+
+  <video id="localVideo" autoplay muted playsinline></video>
+  <video id="remoteVideo" autoplay playsinline></video>
+
+  <script>
+    // Show user info
+    const name = sessionStorage.getItem("name");
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MetamashX Video Chat</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: orange;
+    }
+
+    video {
+      width: 90%;
+      max-width: 400px;
+      margin: 10px auto;
+      border: 3px solid orange;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: orange;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #ff7b00;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Talking to Stranger...</h1>
+
+  <video id="localVideo" autoplay muted></video>
+  <br>
+  <video id="remoteVideo" autoplay></video>
+
+  <div>
+    <button onclick="alert('Coming soon...')">Next Stranger</button>
+    <button onclick="window.location.href='index.html'">End Chat</button>
+  </div>
+
+  <script>
+    const localVideo = document.getElementById('localVideo');
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(stream => {
+        localVideo.srcObject = stream;
+      })
+      .catch(error => {
+        alert('Camera/Mic permission denied or not supported.');
+      });
+  </script>
+
+</body>
+</html>    const country = sessionStorage.getItem("country");
+    const mobile = sessionStorage.getItem("mobile");
+
+    document.getElementById("userInfo").innerText = 
+      `User: ${name}, Country: ${country}, Mobile: ${mobile}`;
+
+    // Local camera
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(stream => {
+        document.getElementById('localVideo').srcObject = stream;
+      })
+      .catch(error => {
+        console.error('Error accessing media devices.', error);
+      });
+  </script>
+</body><!DOCTYPE html>
+<html>
+<head>
+    <title>MetaMashX Video Chat</title>
+</head>
+<body>
+    <h1>Welcome to MetaMashX Video Chat</h1>
+    <p>Connecting you to a stranger...</p>
+
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+
+    <script>
+        // Temporary basic camera access
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then(stream => {
+            document.getElementById('localVideo').srcObject = stream;
+        })
+        .catch(error => {
+            console.error('Error accessing media devices.', error);
+        });
+    </script>
+</body>
+</html>
+

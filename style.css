@@ -1,0 +1,20 @@
+.button {
+  background-color: #ffa500;
+  ...
+}body {
+  background-color: #111;
+  color: #ccc;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: orange;
+  text-shadow: 0 0 10px orange;
+}
+
+img {
+  margin: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px orange;
+}

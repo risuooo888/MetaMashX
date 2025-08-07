@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetamashX Stranger Video Chat</title>
+  <style>
+    body { background-color: black; color: white; text-align: center; font-family: sans-serif; }
+    video { width: 300px; height: 225px; border: 2px solid orange; margin: 10px; }
+    button { padding: 10px 20px; background: orange; border: none; border-radius: 5px; }
+    h2 { color: orange; }
+  </style>
+</head>
+<body>
+  <h2>MetamashX Stranger Video Chat</h2>
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video><br>
+  <button onclick="connectStranger()">Connect to Stranger</button>
+
+  <script>
+    // Local video preview
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(stream => {
+        document.getElementById("localVideo").srcObject = stream;
+        // TODO: Add WebRTC logic
+      });
+    
+    function connectStranger() {
+      alert("Stranger connection coming soon...");
+      // TODO: Add signaling server and peer logic
+    }
+  </script>
+</body>
+</html>

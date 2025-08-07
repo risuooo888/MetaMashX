@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Video Chat</title>
+  <style>
+    body { background-color: black; color: white; text-align: center; font-family: sans-serif; }
+    input, button { padding: 10px; margin: 10px; width: 250px; font-size: 16px; }
+    button { background: orange; border: none; border-radius: 5px; }
+    h2 { color: orange; }
+  </style>
+</head>
+<body>
+  <h2>Join Video Chat</h2>
+  <form onsubmit="goToChat(event)">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="text" id="country" placeholder="Country" required><br>
+    <input type="text" id="mobile" placeholder="Mobile Number" required><br>
+    <button type="submit">Start Video Chat</button>
+  </form>
+
+  <script>
+    function goToChat(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const country = document.getElementById('country').value;
+      const mobile = document.getElementById('mobile').value;
+      // Optional: save in localStorage
+      localStorage.setItem("metamashx_user", JSON.stringify({ name, country, mobile }));
+      window.location.href = "chat.html";
+    }
+  </script>
+</body>
+</html>
